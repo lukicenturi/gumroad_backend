@@ -1,0 +1,40 @@
+Started GET "/" for 127.0.0.1 at 2021-10-11 23:37:14 +0700
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lukicenturi/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lukicenturi/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.1ms | Allocations: 526)
+Completed 200 OK in 38ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 6885)
+
+
+Started GET "/api/v1/products" for 127.0.0.1 at 2021-10-11 23:37:17 +0700
+Processing by Api::V1::ProductsController#index as HTML
+  [1m[36mProduct Load (47.5ms)[0m  [1m[34mSELECT products.*, IFNULL(CAST(CAST(AVG(rating) as DECIMAL(2, 1)) as FLOAT), 0) as average_rating FROM `products` LEFT OUTER JOIN `product_reviews` ON `product_reviews`.`product_id` = `products`.`id` GROUP BY `products`.`id`[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+  [1m[36mProductReview Load (139.9ms)[0m  [1m[34mSELECT `product_reviews`.* FROM `product_reviews` WHERE `product_reviews`.`product_id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 1, rating: 4.0, review: "book was full of fluff", created_at: "2021-10-09 15:46:31.094981000 +0000", updated_at: "2021-10-09 15:46:31.094981000 +0000", product_id: 1>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 18, rating: 4.0, review: "ggadf", created_at: "2021-10-10 04:45:15.988489000 +0000", updated_at: "2021-10-10 04:45:15.988489000 +0000", product_id: 4>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 4, rating: 3.0, review: "good things about you", created_at: "2021-10-09 15:47:14.104300000 +0000", updated_at: "2021-10-09 15:47:14.104300000 +0000", product_id: 11>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 1, rating: 4.0, review: "book was full of fluff", created_at: "2021-10-09 15:46:31.094981000 +0000", updated_at: "2021-10-09 15:46:31.094981000 +0000", product_id: 1>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 18, rating: 4.0, review: "ggadf", created_at: "2021-10-10 04:45:15.988489000 +0000", updated_at: "2021-10-10 04:45:15.988489000 +0000", product_id: 4>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 4, rating: 3.0, review: "good things about you", created_at: "2021-10-09 15:47:14.104300000 +0000", updated_at: "2021-10-09 15:47:14.104300000 +0000", product_id: 11>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.88ms)
+Completed 200 OK in 323ms (Views: 108.4ms | ActiveRecord: 199.2ms | Allocations: 43059)
+
+
+Started GET "/api/v1/products" for 127.0.0.1 at 2021-10-11 23:37:19 +0700
+Processing by Api::V1::ProductsController#index as HTML
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT products.*, IFNULL(CAST(CAST(AVG(rating) as DECIMAL(2, 1)) as FLOAT), 0) as average_rating FROM `products` LEFT OUTER JOIN `product_reviews` ON `product_reviews`.`product_id` = `products`.`id` GROUP BY `products`.`id`[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+  [1m[36mProductReview Load (2.7ms)[0m  [1m[34mSELECT `product_reviews`.* FROM `product_reviews` WHERE `product_reviews`.`product_id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)[0m
+  ↳ app/controllers/api/v1/products_controller.rb:4:in `index'
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 1, rating: 4.0, review: "book was full of fluff", created_at: "2021-10-09 15:46:31.094981000 +0000", updated_at: "2021-10-09 15:46:31.094981000 +0000", product_id: 1>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 18, rating: 4.0, review: "ggadf", created_at: "2021-10-10 04:45:15.988489000 +0000", updated_at: "2021-10-10 04:45:15.988489000 +0000", product_id: 4>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 4, rating: 3.0, review: "good things about you", created_at: "2021-10-09 15:47:14.104300000 +0000", updated_at: "2021-10-09 15:47:14.104300000 +0000", product_id: 11>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 1, rating: 4.0, review: "book was full of fluff", created_at: "2021-10-09 15:46:31.094981000 +0000", updated_at: "2021-10-09 15:46:31.094981000 +0000", product_id: 1>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 18, rating: 4.0, review: "ggadf", created_at: "2021-10-10 04:45:15.988489000 +0000", updated_at: "2021-10-10 04:45:15.988489000 +0000", product_id: 4>
+[active_model_serializers] No serializer found for resource: #<ProductReview id: 4, rating: 3.0, review: "good things about you", created_at: "2021-10-09 15:47:14.104300000 +0000", updated_at: "2021-10-09 15:47:14.104300000 +0000", product_id: 11>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.07ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 5.1ms | Allocations: 10520)
+
+
