@@ -42,4 +42,5 @@ set :application, "gumroads_backend"
 set :repo_url, "https://github.com/lukicenturi/gumroads_backend"
 set :branch, "capistrano-deploy"
 set :deploy_to, "/home/deploy/#{fetch :application}"
+set :format, :pretty
 append :linked_files, "config/master.key"

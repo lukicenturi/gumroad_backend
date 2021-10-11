@@ -11,3 +11,15 @@
  DEBUG [a930c5e8] Finished in 0.846 seconds with exit status 0 (successful).
   INFO [6d70c48c] Running /usr/bin/env mkdir -p /tmp as deploy@67.207.86.50
  DEBUG [6d70c48c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-10-11 23:29:43 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8d014b2e] Running [ -d $HOME/.rbenv/versions/3.0.0 ] as deploy@67.207.86.50
+ DEBUG [8d014b2e] Command: [ -d $HOME/.rbenv/versions/3.0.0 ]
+ DEBUG [8d014b2e] Finished in 14.842 seconds with exit status 0 (successful).
+ DEBUG [e9f9e6e7] Running /usr/bin/env which passenger as deploy@67.207.86.50
+ DEBUG [e9f9e6e7] Command: /usr/bin/env which passenger
+ DEBUG [e9f9e6e7] 	/usr/bin/passenger
+ DEBUG [e9f9e6e7] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [69abc873] Running /usr/bin/env mkdir -p /tmp as deploy@67.207.86.50
+ DEBUG [69abc873] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /tmp )
