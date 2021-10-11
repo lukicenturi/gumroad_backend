@@ -1,0 +1,13 @@
+# Logfile created on 2021-10-11 23:28:45 +0700 by logger.rb/v1.4.3
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-10-11 23:28:45 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [19febdc5] Running [ -d $HOME/.rbenv/versions/3.0.0 ] as deploy@67.207.86.50
+ DEBUG [19febdc5] Command: [ -d $HOME/.rbenv/versions/3.0.0 ]
+ DEBUG [19febdc5] Finished in 9.630 seconds with exit status 0 (successful).
+ DEBUG [a930c5e8] Running /usr/bin/env which passenger as deploy@67.207.86.50
+ DEBUG [a930c5e8] Command: /usr/bin/env which passenger
+ DEBUG [a930c5e8] 	/usr/bin/passenger
+ DEBUG [a930c5e8] Finished in 0.846 seconds with exit status 0 (successful).
+  INFO [6d70c48c] Running /usr/bin/env mkdir -p /tmp as deploy@67.207.86.50
+ DEBUG [6d70c48c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /tmp )
