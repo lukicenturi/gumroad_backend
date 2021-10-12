@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: deploy
-  password: 00000000
-  socket: /var/run/mysqld/mysqld.sock
+  username: root
+  password:
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -52,3 +52,5 @@ production:
   <<: *default
   database: gumroads
   username: deploy
+  password: test123456
+  socket: /var/run/mysqld/mysqld.sock
